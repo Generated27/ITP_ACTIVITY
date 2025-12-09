@@ -1,0 +1,277 @@
+/* Custom Bootstrap styling for aesthetic resume */
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #0ea5e9;
+  --text-dark: #0f172a;
+  --text-light: #475569;
+  --bg-light: #f8fafc;
+  --bg-lighter: #e2e8f0;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-lighter) 100%);
+  min-height: 100vh;
+  color: var(--text-light);
+}
+
+.resume-wrapper {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border-top: 4px solid var(--primary-color);
+  padding: 50px 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.hero-section h1 {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  letter-spacing: -0.8px;
+  margin-bottom: 10px !important;
+}
+
+.contact-info {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0 !important;
+}
+
+.contact-info i {
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+/* Main Content */
+.main-content {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+}
+
+/* Sections */
+.resume-section {
+  margin-bottom: 45px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resume-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 4px solid var(--primary-color);
+  display: inline-block;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--text-light);
+}
+
+.resume-section p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.resume-section strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Education Cards */
+.education-card {
+  padding: 18px 20px;
+  border-left: 4px solid var(--accent-color);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.1);
+}
+
+.education-card h5 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 8px !important;
+}
+
+.education-card p {
+  margin: 0 !important;
+  font-size: 0.9rem;
+}
+
+/* Strengths List */
+.strengths-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.strengths-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.strength-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-right: 14px;
+}
+
+/* Download Button */
+.download-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border: none;
+  padding: 14px 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  border-radius: 10px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #1e3a8a 100%);
+  color: white;
+}
+
+.download-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-wrapper {
+    padding: 24px 16px;
+  }
+
+  .hero-section {
+    padding: 30px 20px;
+    margin-bottom: 24px;
+  }
+
+  .hero-section .row {
+    text-align: center !important;
+  }
+
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .main-content {
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 0.85rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    padding: 12px 24px;
+  }
+
+  .education-card {
+    padding: 14px 16px;
+  }
+
+  .strength-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 24px 16px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-content {
+    padding: 20px 16px;
+  }
+
+  .section-title {
+    font-size: 0.8rem;
+    padding-left: 12px;
+  }
+
+  .resume-section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+  }
+}
